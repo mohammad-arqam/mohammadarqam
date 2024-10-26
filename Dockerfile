@@ -1,29 +1,23 @@
-# This file is the main docker file configurations
+# Stage 1: Compile and Build angular codebase
 
-# Official Node JS runtime as a parent image
-FROM node:20.0-alpine
+FROM node:alpine as build
 
-# Set the working directory to ./app
+RUN mkdir -p /app
 WORKDIR /app
+COPY package.json /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package.json ./
+RUN npm install -f
 
-RUN apk add --no-cache git
-
-# Install any needed packages
-RUN npm install
-
-# Audit fix npm packages
-RUN npm audit fix
-
-# Bundle app source
 COPY . /app
+RUN npm run build
 
-# Make port 3000 available to the world outside this container
-EXPOSE 3000
+# Stage 2: Serve app with nginx server
 
-# Run app.js when the container launches
-CMD ["npm", "start"]
+FROM nginx:alpine
+
+COPY --from=build /app/build /usr/share/nginx/html
+
+LABEL org.opencontainers.image.source https://github.com/JayantGoel001/JayantGoel001.github.io
+LABEL org.opencontainers.image.description Docker Image of my Personal Portfolio.
+
+EXPOSE 80

@@ -1,58 +1,55 @@
 {
-  "homepage": "https://developerfolio.js.org/",
-  "name": "developerfolio",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "colorthief": "^2.3.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "gh-pages": "^2.1.1",
-    "jest-canvas-mock": "^2.3.1",
-    "lottie-react": "^2.4.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-easy-emoji": "^1.8.1",
-    "react-headroom": "^3.0.0",
-    "react-reveal": "^1.2.2",
-    "react-scripts": "^5.0.1",
-    "react-test-renderer": "^16.10.2",
-    "react-twitter-embed": "3.0.3",
-    "sass": "^1.32.8"
+  "name": "jayantgoel001.github.io",
+  "version": "2.0.0",
+  "description": "Jayant Goel (JayantGoel001)'s Personal Portfolio",
+  "main": "index.js",
+  "author": "Jayant Goel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JayantGoel001/JayantGoel001.github.io/issues"
   },
+  "keywords": [
+    "Jayant",
+    "Jayant Goel",
+    "Jayant Goel Portfolio",
+    "JayantGoel001",
+    "Jayant Goel (JayantGoel001)'s Personal Portfolio"
+  ],
+  "repository": "https://github.com/JayantGoel001/JayantGoel001.github.io",
+  "homepage": "https://JayantGoel001.github.io",
   "scripts": {
-    "predeploy": "npm run build",
-    "start": "node fetch.js && react-scripts start",
-    "build": "node fetch.js && react-scripts build",
-    "deploy": "gh-pages -b master -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
-    "check-format": "prettier -c \"./**/*.{js,css,json,scss}\""
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.3%",
-      "not ie 11",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      ">0.3%",
-      "not ie 11",
-      "not dead",
-      "not op_mini all",
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@angular/animations": "^18.2.2",
+    "@angular/common": "^18.2.2",
+    "@angular/compiler": "^18.2.2",
+    "@angular/core": "^18.2.2",
+    "@angular/forms": "^18.2.2",
+    "@angular/platform-browser": "^18.2.2",
+    "@angular/platform-browser-dynamic": "^18.2.2",
+    "@angular/router": "^18.2.2",
+    "@angular/service-worker": "^18.2.2",
+    "@ng-bootstrap/ng-bootstrap": "^17.0.1",
+    "zone.js": "~0.14.10"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "dotenv": "^8.2.0",
-    "prettier": "^2.3.1"
+    "@angular-devkit/build-angular": "^18.2.2",
+    "@angular/cli": "^18.2.2",
+    "@angular/compiler-cli": "^18.2.2",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0-rc.2",
+    "jasmine-core": "~3.7.0",
+    "karma": "~6.3.14",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "typescript": "~5.4.5"
   }
 }
